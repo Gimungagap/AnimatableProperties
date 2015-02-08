@@ -1,0 +1,7 @@
+*.xcworkspace
+*.xccheckout
+*.DS_Store
+*xcuserdata*
+*build*
+*Frameworks*
+.idea
