@@ -8,12 +8,12 @@
 
 
 #import "ViewController.h"
-#import "TSTRoundProgressBar2.h"
+#import "TSTRoundProgressBar.h"
 
 
 @interface ViewController ()
 
-@property (weak, nonatomic) IBOutlet TSTRoundProgressBar2 *progressBar2;
+@property (weak, nonatomic) IBOutlet TSTRoundProgressBar *progressBar2;
 
 @end
 

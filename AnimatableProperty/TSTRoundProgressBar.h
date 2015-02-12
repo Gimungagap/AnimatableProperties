@@ -10,7 +10,7 @@
 #import <UIKit/UIKit.h>
 
 
-@interface TSTRoundProgressBar2 : UIView
+@interface TSTRoundProgressBar : UIView
 
 @property (readwrite, nonatomic) CGFloat progressStart;
 - (void)setProgressStart:(CGFloat)progressStart animated:(BOOL)animated;

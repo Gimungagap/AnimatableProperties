@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3733033C1A8D493500ED29FE /* TSTRoundProgressLayer2.m in Sources */ = {isa = PBXBuildFile; fileRef = 3733033B1A8D493500ED29FE /* TSTRoundProgressLayer2.m */; };
-		3733033F1A8D496500ED29FE /* TSTRoundProgressBar2.m in Sources */ = {isa = PBXBuildFile; fileRef = 3733033E1A8D496500ED29FE /* TSTRoundProgressBar2.m */; };
+		3733033C1A8D493500ED29FE /* TSTRoundProgressLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3733033B1A8D493500ED29FE /* TSTRoundProgressLayer.m */; };
+		3733033F1A8D496500ED29FE /* TSTRoundProgressBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3733033E1A8D496500ED29FE /* TSTRoundProgressBar.m */; };
 		3771E6CA1A87C6DF0001CEDC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3771E6C91A87C6DF0001CEDC /* main.m */; };
 		3771E6CD1A87C6DF0001CEDC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3771E6CC1A87C6DF0001CEDC /* AppDelegate.m */; };
 		3771E6D01A87C6DF0001CEDC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3771E6CF1A87C6DF0001CEDC /* ViewController.m */; };
@@ -19,10 +19,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3733033A1A8D493500ED29FE /* TSTRoundProgressLayer2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTRoundProgressLayer2.h; sourceTree = "<group>"; };
-		3733033B1A8D493500ED29FE /* TSTRoundProgressLayer2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSTRoundProgressLayer2.m; sourceTree = "<group>"; };
-		3733033D1A8D496500ED29FE /* TSTRoundProgressBar2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTRoundProgressBar2.h; sourceTree = "<group>"; };
-		3733033E1A8D496500ED29FE /* TSTRoundProgressBar2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSTRoundProgressBar2.m; sourceTree = "<group>"; };
+		3733033A1A8D493500ED29FE /* TSTRoundProgressLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTRoundProgressLayer.h; sourceTree = "<group>"; };
+		3733033B1A8D493500ED29FE /* TSTRoundProgressLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSTRoundProgressLayer.m; sourceTree = "<group>"; };
+		3733033D1A8D496500ED29FE /* TSTRoundProgressBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTRoundProgressBar.h; sourceTree = "<group>"; };
+		3733033E1A8D496500ED29FE /* TSTRoundProgressBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSTRoundProgressBar.m; sourceTree = "<group>"; };
 		3771E6C41A87C6DF0001CEDC /* AnimatableProperty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimatableProperty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3771E6C81A87C6DF0001CEDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3771E6C91A87C6DF0001CEDC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -51,10 +51,10 @@
 		373303401A8D49B400ED29FE /* views */ = {
 			isa = PBXGroup;
 			children = (
-				3733033D1A8D496500ED29FE /* TSTRoundProgressBar2.h */,
-				3733033E1A8D496500ED29FE /* TSTRoundProgressBar2.m */,
-				3733033A1A8D493500ED29FE /* TSTRoundProgressLayer2.h */,
-				3733033B1A8D493500ED29FE /* TSTRoundProgressLayer2.m */,
+				3733033D1A8D496500ED29FE /* TSTRoundProgressBar.h */,
+				3733033E1A8D496500ED29FE /* TSTRoundProgressBar.m */,
+				3733033A1A8D493500ED29FE /* TSTRoundProgressLayer.h */,
+				3733033B1A8D493500ED29FE /* TSTRoundProgressLayer.m */,
 			);
 			name = views;
 			sourceTree = "<group>";
@@ -172,8 +172,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3771E6D01A87C6DF0001CEDC /* ViewController.m in Sources */,
-				3733033C1A8D493500ED29FE /* TSTRoundProgressLayer2.m in Sources */,
-				3733033F1A8D496500ED29FE /* TSTRoundProgressBar2.m in Sources */,
+				3733033C1A8D493500ED29FE /* TSTRoundProgressLayer.m in Sources */,
+				3733033F1A8D496500ED29FE /* TSTRoundProgressBar.m in Sources */,
 				3771E6CD1A87C6DF0001CEDC /* AppDelegate.m in Sources */,
 				3771E6CA1A87C6DF0001CEDC /* main.m in Sources */,
 			);

@@ -8,10 +8,10 @@
 
 
 #import <UIKit/UIKit.h>
-#import "TSTRoundProgressLayer2.h"
+#import "TSTRoundProgressLayer.h"
 
 
-@interface TSTRoundProgressLayer2 ()
+@interface TSTRoundProgressLayer ()
 
 @property (assign, nonatomic) CGFloat animatableProgressStart;
 @property (assign, nonatomic) CGFloat animatableProgressEnd;
@@ -19,7 +19,7 @@
 @end
 
 
-@implementation TSTRoundProgressLayer2
+@implementation TSTRoundProgressLayer
 
 //otherwise changing animatableProgress won't let view redraw
 @dynamic animatableProgressStart, animatableProgressEnd;

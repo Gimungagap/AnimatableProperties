@@ -10,7 +10,7 @@
 #import <QuartzCore/QuartzCore.h>
 
 
-@interface TSTRoundProgressLayer2 : CALayer
+@interface TSTRoundProgressLayer : CALayer
 
 @property (readwrite, nonatomic) CGFloat progressStart;
 - (void)setProgressStart:(CGFloat)progressStart animated:(BOOL)animated;

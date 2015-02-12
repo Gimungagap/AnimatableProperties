@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kJQ-TP-GD3" customClass="TSTRoundProgressBar2">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kJQ-TP-GD3" customClass="TSTRoundProgressBar">
                                 <rect key="frame" x="200" y="225" width="200" height="150"/>
                                 <color key="backgroundColor" red="0.30633224260000003" green="1" blue="0.89365714370000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
