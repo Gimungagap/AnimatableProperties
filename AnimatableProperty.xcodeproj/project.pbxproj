@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3733033C1A8D493500ED29FE /* TSTRoundProgressLayer2.m in Sources */ = {isa = PBXBuildFile; fileRef = 3733033B1A8D493500ED29FE /* TSTRoundProgressLayer2.m */; };
+		3733033F1A8D496500ED29FE /* TSTRoundProgressBar2.m in Sources */ = {isa = PBXBuildFile; fileRef = 3733033E1A8D496500ED29FE /* TSTRoundProgressBar2.m */; };
 		3771E6CA1A87C6DF0001CEDC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3771E6C91A87C6DF0001CEDC /* main.m */; };
 		3771E6CD1A87C6DF0001CEDC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3771E6CC1A87C6DF0001CEDC /* AppDelegate.m */; };
 		3771E6D01A87C6DF0001CEDC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3771E6CF1A87C6DF0001CEDC /* ViewController.m */; };
@@ -19,6 +21,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3733033A1A8D493500ED29FE /* TSTRoundProgressLayer2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTRoundProgressLayer2.h; sourceTree = "<group>"; };
+		3733033B1A8D493500ED29FE /* TSTRoundProgressLayer2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSTRoundProgressLayer2.m; sourceTree = "<group>"; };
+		3733033D1A8D496500ED29FE /* TSTRoundProgressBar2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTRoundProgressBar2.h; sourceTree = "<group>"; };
+		3733033E1A8D496500ED29FE /* TSTRoundProgressBar2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSTRoundProgressBar2.m; sourceTree = "<group>"; };
 		3771E6C41A87C6DF0001CEDC /* AnimatableProperty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimatableProperty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3771E6C81A87C6DF0001CEDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3771E6C91A87C6DF0001CEDC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -48,6 +54,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		373303401A8D49B400ED29FE /* views */ = {
+			isa = PBXGroup;
+			children = (
+				3771E6ED1A87C75F0001CEDC /* TSTRoundProgressBar.h */,
+				3771E6EE1A87C75F0001CEDC /* TSTRoundProgressBar.m */,
+				3733033D1A8D496500ED29FE /* TSTRoundProgressBar2.h */,
+				3733033E1A8D496500ED29FE /* TSTRoundProgressBar2.m */,
+				3771E6F21A87C7DF0001CEDC /* TSTRoundProgressLayer.h */,
+				3771E6F31A87C7DF0001CEDC /* TSTRoundProgressLayer.m */,
+				3733033A1A8D493500ED29FE /* TSTRoundProgressLayer2.h */,
+				3733033B1A8D493500ED29FE /* TSTRoundProgressLayer2.m */,
+			);
+			name = views;
+			sourceTree = "<group>";
+		};
 		3771E6BB1A87C6DF0001CEDC = {
 			isa = PBXGroup;
 			children = (
@@ -68,18 +89,15 @@
 		3771E6C61A87C6DF0001CEDC /* AnimatableProperty */ = {
 			isa = PBXGroup;
 			children = (
+				373303401A8D49B400ED29FE /* views */,
 				3771E6CB1A87C6DF0001CEDC /* AppDelegate.h */,
 				3771E6CC1A87C6DF0001CEDC /* AppDelegate.m */,
-				3771E6CE1A87C6DF0001CEDC /* ViewController.h */,
-				3771E6CF1A87C6DF0001CEDC /* ViewController.m */,
-				3771E6D11A87C6DF0001CEDC /* Main.storyboard */,
 				3771E6D41A87C6DF0001CEDC /* Images.xcassets */,
 				3771E6D61A87C6DF0001CEDC /* LaunchScreen.xib */,
+				3771E6D11A87C6DF0001CEDC /* Main.storyboard */,
 				3771E6C71A87C6DF0001CEDC /* Supporting Files */,
-				3771E6ED1A87C75F0001CEDC /* TSTRoundProgressBar.h */,
-				3771E6EE1A87C75F0001CEDC /* TSTRoundProgressBar.m */,
-				3771E6F21A87C7DF0001CEDC /* TSTRoundProgressLayer.h */,
-				3771E6F31A87C7DF0001CEDC /* TSTRoundProgressLayer.m */,
+				3771E6CE1A87C6DF0001CEDC /* ViewController.h */,
+				3771E6CF1A87C6DF0001CEDC /* ViewController.m */,
 			);
 			path = AnimatableProperty;
 			sourceTree = "<group>";
@@ -165,6 +183,8 @@
 			files = (
 				3771E6D01A87C6DF0001CEDC /* ViewController.m in Sources */,
 				3771E6EF1A87C75F0001CEDC /* TSTRoundProgressBar.m in Sources */,
+				3733033C1A8D493500ED29FE /* TSTRoundProgressLayer2.m in Sources */,
+				3733033F1A8D496500ED29FE /* TSTRoundProgressBar2.m in Sources */,
 				3771E6CD1A87C6DF0001CEDC /* AppDelegate.m in Sources */,
 				3771E6F41A87C7DF0001CEDC /* TSTRoundProgressLayer.m in Sources */,
 				3771E6CA1A87C6DF0001CEDC /* main.m in Sources */,

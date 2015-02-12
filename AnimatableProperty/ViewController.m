@@ -9,11 +9,13 @@
 
 #import "ViewController.h"
 #import "TSTRoundProgressBar.h"
+#import "TSTRoundProgressBar2.h"
 
 
 @interface ViewController ()
 
 @property (weak, nonatomic) IBOutlet TSTRoundProgressBar *progressBar;
+@property (weak, nonatomic) IBOutlet TSTRoundProgressBar2 *progressBar2;
 
 @end
 
@@ -26,13 +28,25 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        self.progressBar.progress = 0.8;
+        
+        self.progressBar2.progressStart = 0.2;
+        self.progressBar2.progressEnd = 0.8;
+        
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.8 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [self.progressBar setProgress:0.2 animated:NO];
+            
+            [self.progressBar2 setProgressStart:0.1 animated:YES];
+            [self.progressBar2 setProgressEnd:0.2 animated:YES];
+            
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                
+                [self.progressBar2 setProgressEnd:0.5 animated:NO];
+            });
         });
     });
+    
 }
 
 @end

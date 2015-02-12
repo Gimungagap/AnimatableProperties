@@ -17,22 +17,33 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view opaque="NO" contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="FQ1-wz-x3f" customClass="TSTRoundProgressBar">
-                                <rect key="frame" x="200" y="225" width="200" height="150"/>
+                                <rect key="frame" x="200" y="125" width="200" height="150"/>
                                 <color key="backgroundColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="p9Z-Im-Gjg"/>
                                     <constraint firstAttribute="width" constant="200" id="roc-AP-GQi"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kJQ-TP-GD3" customClass="TSTRoundProgressBar2">
+                                <rect key="frame" x="200" y="283" width="200" height="150"/>
+                                <color key="backgroundColor" red="0.30633224260000003" green="1" blue="0.89365714370000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="IsR-2L-Mmq"/>
+                                    <constraint firstAttribute="width" constant="200" id="Yop-Ao-Rt3"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="FQ1-wz-x3f" secondAttribute="centerX" id="A93-tG-dnI"/>
-                            <constraint firstAttribute="centerY" secondItem="FQ1-wz-x3f" secondAttribute="centerY" id="W8v-Vh-wG6"/>
+                            <constraint firstItem="kJQ-TP-GD3" firstAttribute="top" secondItem="FQ1-wz-x3f" secondAttribute="bottom" constant="8" id="JQg-v4-VoI"/>
+                            <constraint firstAttribute="centerY" secondItem="FQ1-wz-x3f" secondAttribute="centerY" constant="100" id="W8v-Vh-wG6"/>
+                            <constraint firstItem="kJQ-TP-GD3" firstAttribute="centerX" secondItem="FQ1-wz-x3f" secondAttribute="centerX" id="yBh-yl-IBH"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="progressBar" destination="FQ1-wz-x3f" id="beT-cN-Mdn"/>
+                        <outlet property="progressBar2" destination="kJQ-TP-GD3" id="J9O-9W-5cM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
