@@ -15,9 +15,7 @@
 		3771E6D31A87C6DF0001CEDC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3771E6D11A87C6DF0001CEDC /* Main.storyboard */; };
 		3771E6D51A87C6DF0001CEDC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3771E6D41A87C6DF0001CEDC /* Images.xcassets */; };
 		3771E6D81A87C6DF0001CEDC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3771E6D61A87C6DF0001CEDC /* LaunchScreen.xib */; };
-		3771E6EF1A87C75F0001CEDC /* TSTRoundProgressBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3771E6EE1A87C75F0001CEDC /* TSTRoundProgressBar.m */; };
 		3771E6F11A87C7720001CEDC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3771E6F01A87C7720001CEDC /* QuartzCore.framework */; };
-		3771E6F41A87C7DF0001CEDC /* TSTRoundProgressLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3771E6F31A87C7DF0001CEDC /* TSTRoundProgressLayer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,11 +33,7 @@
 		3771E6D21A87C6DF0001CEDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3771E6D41A87C6DF0001CEDC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3771E6D71A87C6DF0001CEDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		3771E6ED1A87C75F0001CEDC /* TSTRoundProgressBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTRoundProgressBar.h; sourceTree = "<group>"; };
-		3771E6EE1A87C75F0001CEDC /* TSTRoundProgressBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSTRoundProgressBar.m; sourceTree = "<group>"; };
 		3771E6F01A87C7720001CEDC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		3771E6F21A87C7DF0001CEDC /* TSTRoundProgressLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTRoundProgressLayer.h; sourceTree = "<group>"; };
-		3771E6F31A87C7DF0001CEDC /* TSTRoundProgressLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSTRoundProgressLayer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,12 +51,8 @@
 		373303401A8D49B400ED29FE /* views */ = {
 			isa = PBXGroup;
 			children = (
-				3771E6ED1A87C75F0001CEDC /* TSTRoundProgressBar.h */,
-				3771E6EE1A87C75F0001CEDC /* TSTRoundProgressBar.m */,
 				3733033D1A8D496500ED29FE /* TSTRoundProgressBar2.h */,
 				3733033E1A8D496500ED29FE /* TSTRoundProgressBar2.m */,
-				3771E6F21A87C7DF0001CEDC /* TSTRoundProgressLayer.h */,
-				3771E6F31A87C7DF0001CEDC /* TSTRoundProgressLayer.m */,
 				3733033A1A8D493500ED29FE /* TSTRoundProgressLayer2.h */,
 				3733033B1A8D493500ED29FE /* TSTRoundProgressLayer2.m */,
 			);
@@ -182,11 +172,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3771E6D01A87C6DF0001CEDC /* ViewController.m in Sources */,
-				3771E6EF1A87C75F0001CEDC /* TSTRoundProgressBar.m in Sources */,
 				3733033C1A8D493500ED29FE /* TSTRoundProgressLayer2.m in Sources */,
 				3733033F1A8D496500ED29FE /* TSTRoundProgressBar2.m in Sources */,
 				3771E6CD1A87C6DF0001CEDC /* AppDelegate.m in Sources */,
-				3771E6F41A87C7DF0001CEDC /* TSTRoundProgressLayer.m in Sources */,
 				3771E6CA1A87C6DF0001CEDC /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
