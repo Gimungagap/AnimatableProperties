@@ -18,7 +18,7 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kJQ-TP-GD3" customClass="TSTRoundProgressBar">
                                 <rect key="frame" x="200" y="225" width="200" height="150"/>
-                                <color key="backgroundColor" red="0.30633224260000003" green="1" blue="0.89365714370000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="IsR-2L-Mmq"/>
                                     <constraint firstAttribute="width" constant="200" id="Yop-Ao-Rt3"/>
@@ -32,7 +32,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="progressBar2" destination="kJQ-TP-GD3" id="J9O-9W-5cM"/>
+                        <outlet property="progressBar" destination="kJQ-TP-GD3" id="bsA-i0-ss5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

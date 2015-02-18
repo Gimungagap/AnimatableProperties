@@ -19,8 +19,7 @@
 
 @implementation TSTRoundProgressLayer
 
-//otherwise changing property values won't let view redraw
-@dynamic progressColor, progressStart, progressEnd;
+@dynamic progressColor, progress;
 
 
 #pragma mark - Public
@@ -33,19 +32,11 @@
     }
 }
 
-- (void)setProgressStart:(CGFloat)progressStart animated:(BOOL)animated
+- (void)setProgress:(CGFloat)progress animated:(BOOL)animated
 {
-    self.progressStart = progressStart;
+    self.progress = progress;
     if (!animated) {
-        [self removeAnimationForKey:NSStringFromSelector(@selector(progressStart))];
-    }
-}
-
-- (void)setProgressEnd:(CGFloat)progressEnd animated:(BOOL)animated
-{
-    self.progressEnd = progressEnd;
-    if (!animated) {
-        [self removeAnimationForKey:NSStringFromSelector(@selector(progressEnd))];
+        [self removeAnimationForKey:NSStringFromSelector(@selector(progress))];
     }
 }
 
@@ -55,8 +46,7 @@
 + (BOOL)needsDisplayForKey:(NSString *)key
 {
     if ([key isEqualToString:NSStringFromSelector(@selector(progressColor))] ||
-        [key isEqualToString:NSStringFromSelector(@selector(progressStart))] ||
-        [key isEqualToString:NSStringFromSelector(@selector(progressEnd))])
+        [key isEqualToString:NSStringFromSelector(@selector(progress))])
     {
         return YES;
     }
@@ -66,8 +56,7 @@
 - (id<CAAction>)actionForKey:(NSString *)key
 {
     if ([key isEqualToString:NSStringFromSelector(@selector(progressColor))] ||
-        [key isEqualToString:NSStringFromSelector(@selector(progressStart))] ||
-        [key isEqualToString:NSStringFromSelector(@selector(progressEnd))])
+        [key isEqualToString:NSStringFromSelector(@selector(progress))])
     {
         CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:key];
         animation.duration = 1;
@@ -107,8 +96,8 @@
                     CGRectGetMidX(rect),
                     CGRectGetMidY(rect),
                     radius,
-                    -M_PI_2 + M_PI*2*self.progressStart,
-                    -M_PI_2 + M_PI*2*self.progressEnd,
+                    -M_PI_2,
+                    -M_PI_2 + M_PI*2*self.progress,
                     NO);
     CGContextStrokePath(context);
 }

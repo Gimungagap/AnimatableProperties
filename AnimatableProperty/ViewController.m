@@ -13,7 +13,7 @@
 
 @interface ViewController ()
 
-@property (weak, nonatomic) IBOutlet TSTRoundProgressBar *progressBar2;
+@property (weak, nonatomic) IBOutlet TSTRoundProgressBar *progressBar;
 
 @end
 
@@ -27,27 +27,22 @@
 {
     [super viewDidLoad];
     
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    [self.progressBar setProgress:0.2 animated:NO];
+
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         
-        self.progressBar2.progressStart = 0.2;
-        self.progressBar2.progressEnd = 0.8;
+        self.progressBar.progressColor = [UIColor magentaColor];
+        self.progressBar.progress = 0.9;
         
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.8 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             
-            self.progressBar2.progressColor = [UIColor magentaColor];
-            self.progressBar2.progressStart = 0.1;
+            self.progressBar.progressColor = [UIColor greenColor];
+            self.progressBar.progress = 0.4;
             
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                 
-                self.progressBar2.progressColor = [UIColor yellowColor];
-                self.progressBar2.progressEnd = 0.2;
-                
-                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                    
-                    [self.progressBar2 setProgressColor:[UIColor redColor] animated:NO];
-                    [self.progressBar2 setProgressStart:0.2 animated:NO];
-                    [self.progressBar2 setProgressEnd:0.8 animated:YES];
-                });
+                [self.progressBar setProgressColor:[UIColor redColor] animated:NO];
+                [self.progressBar setProgress:0.9 animated:NO];
             });
         });
     });

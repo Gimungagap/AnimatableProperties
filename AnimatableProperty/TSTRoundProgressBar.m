@@ -39,34 +39,19 @@
     [(TSTRoundProgressLayer*)self.layer setProgressColor:progressColor.CGColor animated:animated];
 }
 
-- (CGFloat)progressStart
+- (CGFloat)progress
 {
-    return [(TSTRoundProgressLayer*)self.layer progressStart];
+    return [(TSTRoundProgressLayer*)self.layer progress];
 }
 
-- (void)setProgressStart:(CGFloat)progressStart
+- (void)setProgress:(CGFloat)progress
 {
-    [(TSTRoundProgressLayer*)self.layer setProgressStart:progressStart];
+    [(TSTRoundProgressLayer*)self.layer setProgress:progress];
 }
 
-- (void)setProgressStart:(CGFloat)progressStart animated:(BOOL)animated
+- (void)setProgress:(CGFloat)progress animated:(BOOL)animated
 {
-    [(TSTRoundProgressLayer*)self.layer setProgressStart:progressStart animated:animated];
-}
-
-- (CGFloat)progressEnd
-{
-    return [(TSTRoundProgressLayer*)self.layer progressEnd];
-}
-
-- (void)setProgressEnd:(CGFloat)progress
-{
-    [(TSTRoundProgressLayer*)self.layer setProgressEnd:progress];
-}
-
-- (void)setProgressEnd:(CGFloat)progress animated:(BOOL)animated
-{
-    [(TSTRoundProgressLayer*)self.layer setProgressEnd:progress animated:animated];
+    [(TSTRoundProgressLayer*)self.layer setProgress:progress animated:animated];
 }
 
 @end

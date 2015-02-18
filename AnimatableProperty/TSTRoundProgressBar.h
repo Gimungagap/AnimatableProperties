@@ -15,10 +15,7 @@
 @property (readwrite, nonatomic) UIColor *progressColor;
 - (void)setProgressColor:(UIColor*)progressColor animated:(BOOL)animated;
 
-@property (readwrite, nonatomic) CGFloat progressStart;
-- (void)setProgressStart:(CGFloat)progressStart animated:(BOOL)animated;
-
-@property (readwrite, nonatomic) CGFloat progressEnd;
-- (void)setProgressEnd:(CGFloat)progress animated:(BOOL)animated;
+@property (readwrite, nonatomic) CGFloat progress;
+- (void)setProgress:(CGFloat)progress animated:(BOOL)animated;
 
 @end
