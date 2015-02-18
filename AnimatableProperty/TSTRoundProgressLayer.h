@@ -12,6 +12,9 @@
 
 @interface TSTRoundProgressLayer : CALayer
 
+@property (readwrite, nonatomic) UIColor *progressColor;
+- (void)setProgressColor:(UIColor*)progressColor animated:(BOOL)animated;
+
 @property (readwrite, nonatomic) CGFloat progressStart;
 - (void)setProgressStart:(CGFloat)progressStart animated:(BOOL)animated;
 

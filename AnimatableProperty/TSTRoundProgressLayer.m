@@ -13,6 +13,7 @@
 
 @interface TSTRoundProgressLayer ()
 
+@property (strong, nonatomic) __attribute__((NSObject)) CGColorRef animatableProgressColor;
 @property (assign, nonatomic) CGFloat animatableProgressStart;
 @property (assign, nonatomic) CGFloat animatableProgressEnd;
 
@@ -22,10 +23,28 @@
 @implementation TSTRoundProgressLayer
 
 //otherwise changing animatableProgress won't let view redraw
-@dynamic animatableProgressStart, animatableProgressEnd;
+@dynamic animatableProgressColor, animatableProgressStart, animatableProgressEnd;
 
 
 #pragma mark - Public
+
+- (UIColor *)progressColor
+{
+    return [UIColor colorWithCGColor:self.animatableProgressColor];
+}
+
+- (void)setProgressColor:(UIColor *)progressColor
+{
+    [self setProgressColor:progressColor animated:YES];
+}
+
+- (void)setProgressColor:(UIColor *)progressColor animated:(BOOL)animated
+{
+    self.animatableProgressColor = progressColor.CGColor;
+    if (!animated) {
+        [self removeAnimationForKey:NSStringFromSelector(@selector(animatableProgressColor))];
+    }
+}
 
 - (CGFloat)progressStart
 {
@@ -68,7 +87,8 @@
 
 + (BOOL)needsDisplayForKey:(NSString *)key
 {
-    if ([key isEqualToString:NSStringFromSelector(@selector(animatableProgressStart))] ||
+    if ([key isEqualToString:NSStringFromSelector(@selector(animatableProgressColor))] ||
+        [key isEqualToString:NSStringFromSelector(@selector(animatableProgressStart))] ||
         [key isEqualToString:NSStringFromSelector(@selector(animatableProgressEnd))])
     {
         return YES;
@@ -78,7 +98,8 @@
 
 - (id<CAAction>)actionForKey:(NSString *)key
 {
-    if ([key isEqualToString:NSStringFromSelector(@selector(animatableProgressStart))] ||
+    if ([key isEqualToString:NSStringFromSelector(@selector(animatableProgressColor))] ||
+        [key isEqualToString:NSStringFromSelector(@selector(animatableProgressStart))] ||
         [key isEqualToString:NSStringFromSelector(@selector(animatableProgressEnd))])
     {
         CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:key];
@@ -88,6 +109,14 @@
         return animation;
     }
     return [super actionForKey:key];
+}
+
++ (id)defaultValueForKey:(NSString *)key
+{
+    if ([key isEqualToString:NSStringFromSelector(@selector(animatableProgressColor))]) {
+        return (id)[UIColor blackColor].CGColor;
+    }
+    return [super defaultValueForKey:key];
 }
 
 
@@ -104,7 +133,7 @@
     CGFloat radius = MIN(rect.size.height, rect.size.width)/2;
     
     CGContextSetLineWidth(context, lineWidth);
-    CGContextSetStrokeColorWithColor(context, [UIColor redColor].CGColor);
+    CGContextSetStrokeColorWithColor(context, self.animatableProgressColor);
     
     CGContextBeginPath(context);
     CGContextAddArc(context,

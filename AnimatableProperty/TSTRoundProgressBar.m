@@ -24,6 +24,21 @@
 
 #pragma mark - Public
 
+- (UIColor *)progressColor
+{
+    return [(TSTRoundProgressLayer*)self.layer progressColor];
+}
+
+- (void)setProgressColor:(UIColor *)progressColor
+{
+    [(TSTRoundProgressLayer*)self.layer setProgressColor:progressColor];
+}
+
+- (void)setProgressColor:(UIColor *)progressColor animated:(BOOL)animated
+{
+    [(TSTRoundProgressLayer*)self.layer setProgressColor:progressColor animated:animated];
+}
+
 - (CGFloat)progressStart
 {
     return [(TSTRoundProgressLayer*)self.layer progressStart];
