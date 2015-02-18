@@ -26,17 +26,17 @@
 
 - (UIColor *)progressColor
 {
-    return [(TSTRoundProgressLayer*)self.layer progressColor];
+    return [UIColor colorWithCGColor:[(TSTRoundProgressLayer*)self.layer progressColor]];
 }
 
 - (void)setProgressColor:(UIColor *)progressColor
 {
-    [(TSTRoundProgressLayer*)self.layer setProgressColor:progressColor];
+    [(TSTRoundProgressLayer*)self.layer setProgressColor:progressColor.CGColor];
 }
 
 - (void)setProgressColor:(UIColor *)progressColor animated:(BOOL)animated
 {
-    [(TSTRoundProgressLayer*)self.layer setProgressColor:progressColor animated:animated];
+    [(TSTRoundProgressLayer*)self.layer setProgressColor:progressColor.CGColor animated:animated];
 }
 
 - (CGFloat)progressStart
