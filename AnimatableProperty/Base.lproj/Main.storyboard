@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kJQ-TP-GD3" customClass="TSTRoundProgressBar">
+                            <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="kJQ-TP-GD3" customClass="TSTRoundProgressBar">
                                 <rect key="frame" x="200" y="225" width="200" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="IsR-2L-Mmq"/>
