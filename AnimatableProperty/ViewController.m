@@ -27,22 +27,22 @@
 {
     [super viewDidLoad];
     
-    [self.progressBar setProgress:0.2 animated:NO];
+    self.progressBar.progress = 0.2;
 
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        
-        self.progressBar.progressColor = [UIColor magentaColor];
-        self.progressBar.progress = 0.9;
+
+        [self.progressBar setProgressColor:[UIColor magentaColor] animated:YES];
+        [self.progressBar setProgress:0.9 animated:YES];
         
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.8 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             
-            self.progressBar.progressColor = [UIColor greenColor];
-            self.progressBar.progress = 0.4;
+            [self.progressBar setProgressColor:[UIColor greenColor] animated:YES];
+            [self.progressBar setProgress:0.4 animated:YES];
             
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                 
-                [self.progressBar setProgressColor:[UIColor redColor] animated:NO];
-                [self.progressBar setProgress:0.9 animated:NO];
+                self.progressBar.progressColor = [UIColor redColor];
+                self.progressBar.progress = 0.9;
             });
         });
     });
