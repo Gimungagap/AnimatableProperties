@@ -15,7 +15,7 @@
 @property (strong, nonatomic) __attribute__((NSObject)) CGColorRef progressColor;
 - (void)setProgressColor:(CGColorRef)progressColor animated:(BOOL)animated;
 
-@property (readwrite, nonatomic) CGFloat progress;
+@property (assign, nonatomic) CGFloat progress;
 - (void)setProgress:(CGFloat)progress animated:(BOOL)animated;
 
 @end

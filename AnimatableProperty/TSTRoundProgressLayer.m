@@ -13,14 +13,13 @@
 
 @interface TSTRoundProgressLayer ()
 
-@property (assign, nonatomic) CGFloat animatableProgress;
 
 @end
 
 
 @implementation TSTRoundProgressLayer
 
-@dynamic progressColor, animatableProgress;
+@dynamic progressColor, progress;
 
 
 #pragma mark - Public
@@ -33,22 +32,20 @@
     }
 }
 
-- (CGFloat)progress
-{
-    return self.animatableProgress;
-}
-
-- (void)setProgress:(CGFloat)progress
-{
-    self.animatableProgress = MAX(0, MIN(progress, 1));
-}
-
 - (void)setProgress:(CGFloat)progress animated:(BOOL)animated
 {
     self.progress = progress;
     if (!animated) {
-        [self removeAnimationForKey:NSStringFromSelector(@selector(animatableProgress))];
+        [self removeAnimationForKey:NSStringFromSelector(@selector(progress))];
     }
+}
+
+- (void)setValue:(id)value forKey:(NSString *)key
+{
+    if ([key isEqualToString:NSStringFromSelector(@selector(progress))]) {
+        value = @(MAX(0, MIN([value floatValue], 1)));
+    }
+    [super setValue:value forKey:key];
 }
 
 
@@ -57,7 +54,7 @@
 + (BOOL)needsDisplayForKey:(NSString *)key
 {
     if ([key isEqualToString:NSStringFromSelector(@selector(progressColor))] ||
-        [key isEqualToString:NSStringFromSelector(@selector(animatableProgress))])
+        [key isEqualToString:NSStringFromSelector(@selector(progress))])
     {
         return YES;
     }
@@ -67,7 +64,7 @@
 - (id<CAAction>)actionForKey:(NSString *)key
 {
     if ([key isEqualToString:NSStringFromSelector(@selector(progressColor))] ||
-        [key isEqualToString:NSStringFromSelector(@selector(animatableProgress))])
+        [key isEqualToString:NSStringFromSelector(@selector(progress))])
     {
         CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:key];
         animation.duration = 1;
@@ -81,7 +78,7 @@
 + (id)defaultValueForKey:(NSString *)key
 {
     if ([key isEqualToString:NSStringFromSelector(@selector(progressColor))]) {
-        return (id)[UIColor blackColor].CGColor;
+        return (id)[UIColor blueColor].CGColor;
     }
     return [super defaultValueForKey:key];
 }
@@ -108,7 +105,7 @@
                     CGRectGetMidY(rect),
                     radius,
                     -M_PI_2,
-                    -M_PI_2 + M_PI*2*self.animatableProgress,
+                    -M_PI_2 + M_PI*2*self.progress,
                     NO);
     CGContextStrokePath(context);
 }
