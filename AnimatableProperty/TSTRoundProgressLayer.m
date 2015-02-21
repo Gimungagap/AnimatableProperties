@@ -83,6 +83,11 @@
     return [super defaultValueForKey:key];
 }
 
+- (BOOL)isOpaque
+{
+    return NO;
+}
+
 
 #pragma mark - Drawing
 

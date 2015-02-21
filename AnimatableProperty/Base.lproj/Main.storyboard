@@ -18,7 +18,6 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kJQ-TP-GD3" customClass="TSTRoundProgressBar">
                                 <rect key="frame" x="200" y="225" width="200" height="150"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="IsR-2L-Mmq"/>
                                     <constraint firstAttribute="width" constant="200" id="Yop-Ao-Rt3"/>
