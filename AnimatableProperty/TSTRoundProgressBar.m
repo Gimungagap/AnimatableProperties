@@ -31,7 +31,7 @@
 
 - (void)setProgressColor:(UIColor *)progressColor
 {
-    [(TSTRoundProgressLayer*)self.layer setProgressColor:progressColor.CGColor];
+    [(TSTRoundProgressLayer*)self.layer setProgressColor:progressColor.CGColor animated:NO];
 }
 
 - (void)setProgressColor:(UIColor *)progressColor animated:(BOOL)animated
@@ -46,7 +46,7 @@
 
 - (void)setProgress:(CGFloat)progress
 {
-    [(TSTRoundProgressLayer*)self.layer setProgress:progress];
+    [(TSTRoundProgressLayer*)self.layer setProgress:progress animated:NO];
 }
 
 - (void)setProgress:(CGFloat)progress animated:(BOOL)animated
