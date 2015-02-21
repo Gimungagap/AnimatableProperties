@@ -58,6 +58,7 @@
     {
         return YES;
     }
+    
     return [super needsDisplayForKey:key];
 }
 
