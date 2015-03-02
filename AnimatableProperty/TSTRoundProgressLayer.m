@@ -13,13 +13,14 @@
 
 @interface TSTRoundProgressLayer ()
 
+@property (assign, nonatomic) CGFloat animatableProgress;
 
 @end
 
 
 @implementation TSTRoundProgressLayer
 
-@dynamic progressColor, progress;
+@dynamic progressColor, animatableProgress;
 
 
 #pragma mark - Public
@@ -32,20 +33,22 @@
     }
 }
 
+- (CGFloat)progress
+{
+    return self.animatableProgress;
+}
+
+- (void)setProgress:(CGFloat)progress
+{
+    self.animatableProgress = MAX(0, MIN(progress, 1));
+}
+
 - (void)setProgress:(CGFloat)progress animated:(BOOL)animated
 {
     self.progress = progress;
     if (!animated) {
-        [self removeAnimationForKey:NSStringFromSelector(@selector(progress))];
+        [self removeAnimationForKey:NSStringFromSelector(@selector(animatableProgress))];
     }
-}
-
-- (void)setValue:(id)value forKey:(NSString *)key
-{
-    if ([key isEqualToString:NSStringFromSelector(@selector(progress))]) {
-        value = @(MAX(0, MIN([value floatValue], 1)));
-    }
-    [super setValue:value forKey:key];
 }
 
 
@@ -54,18 +57,17 @@
 + (BOOL)needsDisplayForKey:(NSString *)key
 {
     if ([key isEqualToString:NSStringFromSelector(@selector(progressColor))] ||
-        [key isEqualToString:NSStringFromSelector(@selector(progress))])
+        [key isEqualToString:NSStringFromSelector(@selector(animatableProgress))])
     {
         return YES;
     }
-    
     return [super needsDisplayForKey:key];
 }
 
 - (id<CAAction>)actionForKey:(NSString *)key
 {
     if ([key isEqualToString:NSStringFromSelector(@selector(progressColor))] ||
-        [key isEqualToString:NSStringFromSelector(@selector(progress))])
+        [key isEqualToString:NSStringFromSelector(@selector(animatableProgress))])
     {
         CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:key];
         animation.duration = 1;
@@ -111,7 +113,7 @@
                     CGRectGetMidY(rect),
                     radius,
                     -M_PI_2,
-                    -M_PI_2 + M_PI*2*self.progress,
+                    -M_PI_2 + M_PI*2*self.animatableProgress,
                     NO);
     CGContextStrokePath(context);
 }
